@@ -126,7 +126,7 @@ enyo.kind({
         var deviceData = navigator.userAgent;
         if (environment && environment.serialNumber) {
             this.deviceId = environment.serialNumber;
-            locale = enyo.g11n.currentLocale().getLocale();
+            var locale = enyo.g11n.currentLocale().getLocale();
             deviceData = environment.modelName + "/" + environment.platformVersion + "/" + (environment.carrierName || "WiFi") + "/" + locale;
         }
         else {
@@ -191,8 +191,8 @@ enyo.kind({
 
     //Turn a version string into an object with three independent number values
     getVersionObject: function(versionNum) {
-        versionNumParts = versionNum.split(".");
-        if (versionNumParts.length <= 2 || versionNumParts > 3) {
+        var versionNumParts = versionNum.split(".");
+        if (versionNumParts.length < 3 || versionNumParts.length > 3) {
             enyo.log("Updater Helper: An invalid version number was passed, webOS version numbers are #.#.#");
             return false;
         } else {
