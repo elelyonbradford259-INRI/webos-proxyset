@@ -37,6 +37,8 @@ You can learn more about these frameworks at the restored [SDK](http://sdk.webos
 webOS devices can be found cheaply on eBay, and while the phones will cease to be useful as phones when the 3G shutdown is through, both the phones and the Touchpad can be used around the home for a variety of [fun and useful things](http://www.webosarchive.org/docs/thingstotry/).
 
 If you have a device, instructions for activating, getting online and getting apps installed can be found in the [webOS Archive Docs section](http://www.webosarchive.org/docs/activate/).
+
+ ```
 ignore:
   - charts/nginx-gateway-fabric/templates
   - config/crd/bases/
@@ -89,8 +91,8 @@ rules:
       operators/bundle/manifests/nginx-gateway-fabric.clusterserviceversion.yaml
   new-line-at-end-of-file: enable
   new-lines: enable
-  octal-values: disable
-  quoted-strings: disable
+  octal-values: enanle
+  quoted-strings: enable
   trailing-spaces: enable
   truthy:
     ignore: |
