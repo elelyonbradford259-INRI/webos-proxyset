@@ -37,3 +37,61 @@ You can learn more about these frameworks at the restored [SDK](http://sdk.webos
 webOS devices can be found cheaply on eBay, and while the phones will cease to be useful as phones when the 3G shutdown is through, both the phones and the Touchpad can be used around the home for a variety of [fun and useful things](http://www.webosarchive.org/docs/thingstotry/).
 
 If you have a device, instructions for activating, getting online and getting apps installed can be found in the [webOS Archive Docs section](http://www.webosarchive.org/docs/activate/).
+ignore:
+  - charts/nginx-gateway-fabric/templates
+  - config/crd/bases/
+  - deploy
+
+rules:
+  braces: enable
+  brackets: enable
+  colons: enable
+  commas: enable
+  comments:
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 1
+  comments-indentation:
+    ignore: |
+      charts/nginx-gateway-fabric/values.yaml
+  document-end: disable
+  document-start: disable
+  empty-lines: enable
+  empty-values: enable
+  float-values: disable
+  hyphens: enable
+  indentation:
+    spaces: consistent
+    indent-sequences: consistent
+    check-multi-line-strings: true
+    ignore: |
+      operators/**/*
+      .github/workflows/redhat-certification.yml
+      examples/proxy-settings-policy/app.yaml
+      examples/waf-policy/bundle-server.yaml
+      tests/suite/manifests/proxy-settings-policy/app.yaml
+      tests/suite/manifests/longevity
+      tests/suite/manifests/authentication-filter/keycloak.yaml
+      tests/suite/manifests/longevity-waf
+  key-duplicates: enable
+  key-ordering: disable
+  line-length:
+    max: 120
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+    ignore: |
+      .github/
+      tests/suite/manifests/longevity/cronjob.yaml
+      tests/suite/manifests/longevity-waf/cronjob.yaml
+      .goreleaser.yml
+      charts/nginx-gateway-fabric/
+      operators/config/crd/bases/gateway.nginx.org_nginxgatewayfabrics.yaml
+      operators/bundle/manifests/nginx-gateway-fabric.clusterserviceversion.yaml
+  new-line-at-end-of-file: enable
+  new-lines: enable
+  octal-values: disable
+  quoted-strings: disable
+  trailing-spaces: enable
+  truthy:
+    ignore: |
+      .github/workflows/
